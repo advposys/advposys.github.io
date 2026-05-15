@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<title>🛵  副機的離線模式是如何運作的? &#8211; 先用軟體線上說明</title>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -0.1em !important;
+background: none !important;
+padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ht-theme-style-css'  href='../../wp-content/cache/wpfc-minified/d1a29ec81f59cf9f3177f17780bc0fc5/1751162240index.css' type='text/css' media='all' />
+<style id='ht-theme-style-inline-css' type='text/css'>
+.site-header {background-color: #005682 }.nav-header > ul > li.menu-item-has-children > a::after {background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34.1 19' fill='%23ffffff'%3E%3Cpath d='M17 19c-0.5 0-1-0.2-1.4-0.6L0.6 3.4c-0.8-0.8-0.8-2 0-2.8 0.8-0.8 2-0.8 2.8 0L17 14.2 30.7 0.6c0.8-0.8 2-0.8 2.8 0 0.8 0.8 0.8 2 0 2.8L18.4 18.4C18 18.8 17.5 19 17 19z'/%3E%3C/svg%3E");}.ht-container, .ht-sitecontainer--boxed { max-width: 1000px }.hkb-category .hkb-category__link { border-bottom: 1px solid #e6e6e6; } .hkb-category.hkb-category--witharticles { border-bottom: 1px solid #e6e6e6; }.hkb_widget_toc ol li.active > a { background: rgba( 0 ,180, 179, 0.8); }body { color: Black; font-family:Meiryo, "Meiryo UI", "Microsoft JhengHei UI", "Microsoft JhengHei", sans-serif; font-size: 18px; line-height: 25px;
+}
+</style>
+<link rel='stylesheet' id='kirki-styles-ht_theme-css'  href='../../wp-content/themes/knowall/inc/kirki/assets/css/kirki-styles.css' type='text/css' media='all' />
+<style id='kirki-styles-ht_theme-inline-css' type='text/css'>
+.site-header .site-header__title, .nav-header ul li a{color:#fff;}.nav-header .nav-header__mtoggle span, .nav-header .nav-header__mtoggle span::before, .nav-header .nav-header__mtoggle span::after{background:#fff;}a{color:#00b4b3;}button, input[type="reset"], input[type="submit"], input[type="button"], .hkb-article__content ol li:before, .hkb-article__content ul li:before, .hkb_widget_exit__btn{background:#00b4b3;}.hkb-breadcrumbs__icon{fill:#00b4b3;}.hkb-article__title a:hover, .ht-post__title a:hover{color:#00b4b3;}.hkb-article-attachment__icon{fill:#00b4b3;}a:hover{color:#00a8a8;}button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, .ht-transferbox__btn:hover{background:#00a8a8;}.ht-container{max-width:1000px;}.ht-sitecontainer--boxed{max-width:1000px;}h1, h2, h3, h4, h5{font-weight:700;font-style:normal;letter-spacing:0;color:#333333;}body{font-weight:400;font-style:normal;font-size:17px;line-height:1.55;letter-spacing:0;color:#0F0F0F;}.hkb-category .hkb-category__iconwrap{flex-basis:30px;min-width:30px;}.hkb-category .hkb-category__iconwrap img, .ht-categoryheader .hkb-category__iconwrap img{max-width:30px;max-height:30px;}
+</style>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='系統出現Advpos.exe沒有回應 應該如何解決?' href='../advpos-exe沒有回應-應該如何解決/index.html' />
+<link rel='next' title='🔧  已完成點餐的單據要如何改桌號、改餐點?' href='../已完成點餐的單據要如何改桌、改餐點/index.html' />
+<meta name="generator" content="WordPress 4.7.29" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../index.html' />
+<meta name="generator" content="Heroic Knowledge Base v2.11.4" />
+<meta name="generator" content="KnowAll v1.3.2" />
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="../../wp-content/uploads/2017/05/cropped-favicon-152-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2017/05/cropped-favicon-152-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="../../wp-content/uploads/2017/05/cropped-favicon-152-180x180.png" />
+<meta name="msapplication-TileImage" content="../../wp-content/uploads/2017/05/cropped-favicon-152-270x270.png" />
+</head>
+<body class="ht_kb-template-default single single-ht_kb postid-728 single-format-standard ht-kb" itemscope itemtype="https://schema.org/WebPage" data-spy="scroll" data-offset="40" data-target="#navtoc">
+<div class="ht-sitecontainer ht-sitecontainer--wide">
+<!-- .site-header -->
+<div class="site-header">
+<header class="site-header__banner" itemscope itemtype="http://schema.org/WPHeader">
+<div class="ht-container">
+<!-- .site-logo -->
+<div class="site-logo">
+<a href="../../index.html" data-ht-sitetitle="先用軟體線上說明">
+<img alt="先用軟體線上說明" src="../../wp-content/themes/knowall/img/logo.png" />
+<meta itemprop="headline" content="先用軟體線上說明">
+</a>
+</div>
+<!-- /.site-logo -->
+<!-- .nav-primary -->
+<nav class="nav-header" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<button id="ht-navtoggle" class="nav-header__mtoggle"><span>Menu</span></button>
+<ul id="menu-knowall-navigation-menu" class="nav-header__menuwrapper"><li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a target="_blank" href="../../../faq/index.html">問答網</a></li>
+<li id="menu-item-593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-593"><a target="_blank" href="../../../index.html">主網頁</a></li>
+</ul>            </nav>
+<!-- /.nav-primary -->
+</div>
+</header>
+<!-- /.site-header -->
+</div>
+<!-- /.site-header -->
+<div class="ht-pageheader">
+<div class="ht-container">
+<!-- .hkb-breadcrumbs -->
+<div class="hkb-breadcrumbs_wrap">
+<ol class="hkb-breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList" >
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="../../index.html">
+<span itemprop="name">說明分類</span>
+<svg class="hkb-breadcrumbs__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 34.1"><g><path d="M19,17c0,0.5-0.2,1-0.6,1.4L3.4,33.5c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8L14.2,17L0.6,3.4c-0.8-0.8-0.8-2,0-2.8  c0.8-0.8,2-0.8,2.8,0l15.1,15.1C18.8,16,19,16.5,19,17z"/></g></svg>
+</a>
+<meta itemprop="position" content="1" />
+</li>               
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a itemprop="item" href="../../ac/07/index.html">
+<span itemprop="name">多機互聯</span>
+<svg class="hkb-breadcrumbs__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 34.1"><g><path d="M19,17c0,0.5-0.2,1-0.6,1.4L3.4,33.5c-0.8,0.8-2,0.8-2.8,0c-0.8-0.8-0.8-2,0-2.8L14.2,17L0.6,3.4c-0.8-0.8-0.8-2,0-2.8  c0.8-0.8,2-0.8,2.8,0l15.1,15.1C18.8,16,19,16.5,19,17z"/></g></svg>
+</a>
+<meta itemprop="position" content="2" />
+</li>               
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<span itemprop="item">
+<span itemprop="name">🛵  副機的離線模式是如何運作的?</span>
+</span> 
+<meta itemprop="position" content="3" />
+</li>               
+</ol>       
+</div>  
+<!-- /.hkb-breadcrumbs -->    
+<form class="hkb-site-search" method="get" action="../../index.html">
+<label class="hkb-screen-reader-text" for="hkb-search">Search For</label>
+<input id="hkb-search" class="hkb-site-search__field" type="text" value="" placeholder="輸入關鍵字搜尋" name="s" autocomplete="off">
+<img class="hkb-site-search__loader" src="../../wp-content/themes/knowall/img/loading.svg" alt="Searching..." />
+<input type="hidden" name="ht-kb-search" value="1" />
+<button class="hkb-site-search__button" type="submit"><span>搜尋</span></button>
+</form>
+</div>
+</div>
+<!-- .ht-page -->
+<div class="ht-page ht-page--sidebaroff">
+<div class="ht-container">
+<div class="ht-page__content">
+<article class="hkb-article" itemscope itemtype="https://schema.org/CreativeWork">
+<meta itemprop="datePublished" content="五月 27, 2017">
+<header class="hkb-article__header">
+<h1 class="hkb-article__title" itemprop="headline">🛵  副機的離線模式是如何運作的?</h1>
+</header>
+<div class="hkb-article__content" itemprop="text">
+<p>當有時候網路或主機出現問題，我們想利用副機進行點餐操作，這時候副機的<strong>離線模式</strong>就派上用場了</p>
+<h3 id="1-%e5%9c%a8%e5%89%af%e6%a9%9f%e7%9a%84%e7%99%bb%e5%85%a5%e7%95%ab%e9%9d%a2-%e5%b0%87-%e6%ad%a4%e9%9b%bb%e8%85%a6%e8%a8%ad%e7%82%ba%e9%9b%a2%e7%b7%9a%e6%a8%a1%e5%bc%8f-%e6%89%93%e5%8b%be" ><span style="color: #ff0000;"><strong>1.在副機的登入畫面 將 &#8220;此電腦設為離線模式&#8221; 打勾</strong></span></h3>
+<p><img class="alignnone size-full wp-image-731" src="../../wp-content/uploads/2017/05/20170527002.png" alt="" width="615" height="475" srcset="../../wp-content/uploads/2017/05/20170527002.png 615w, ../../wp-content/uploads/2017/05/20170527002-300x232.png 300w, ../../wp-content/uploads/2017/05/20170527002-50x39.png 50w, ../../wp-content/uploads/2017/05/20170527002-60x46.png 60w, ../../wp-content/uploads/2017/05/20170527002-100x77.png 100w" sizes="(max-width: 615px) 100vw, 615px" /></p>
+<p>脫離網路後，副機可正常操作點餐， <span style="color: #0000ff;"><strong>當網路或主機恢復正常了， 可點擊畫面上右下角的網路訊號</strong></span>燈 ，便會再次出現登入畫面</p>
+<p><img class="alignnone size-full wp-image-741" src="../../wp-content/uploads/2017/05/20170527003.png" alt="" width="963" height="721" srcset="../../wp-content/uploads/2017/05/20170527003.png 963w, ../../wp-content/uploads/2017/05/20170527003-300x225.png 300w, ../../wp-content/uploads/2017/05/20170527003-768x575.png 768w, ../../wp-content/uploads/2017/05/20170527003-50x37.png 50w, ../../wp-content/uploads/2017/05/20170527003-60x45.png 60w, ../../wp-content/uploads/2017/05/20170527003-100x75.png 100w" sizes="(max-width: 963px) 100vw, 963px" /></p>
+<p>&nbsp;</p>
+<p><strong>再度連上主機後， 會將系統所有單據同步至主機上， 此時單號會變成所有單據的最大單號值</strong></p>
+<p>舉例來說<br />
+主機目前是5號，但是副機在離線模式未同步前是15號，再次連線後主機會變成最大號15號</p>
+<p>&nbsp;</p>
+<p>如果副機不想上傳離線資料到主機了，請按  設定 -&gt;離開 -&gt; 打烊 打烊後，副機就會將所有自己的離線資料<span style="color: #ff0000;"><strong>全部清除</strong></span>，<strong><span style="color: #0000ff;">如果想保留離線資料又想離開系統，請點擊離開(藍色按鈕)</span></strong>，待下次登入後再上傳同步離線資料至主機</p>
+<p><img class="alignnone size-full wp-image-730" src="../../wp-content/uploads/2017/05/20170527001.png" alt="" width="758" height="443" srcset="../../wp-content/uploads/2017/05/20170527001.png 758w, ../../wp-content/uploads/2017/05/20170527001-300x175.png 300w, ../../wp-content/uploads/2017/05/20170527001-50x29.png 50w, ../../wp-content/uploads/2017/05/20170527001-60x35.png 60w, ../../wp-content/uploads/2017/05/20170527001-100x58.png 100w" sizes="(max-width: 758px) 100vw, 758px" /></p>
+<p>&nbsp;</p>
+<p>每張單據都有一個獨一無二的編碼 當主機執行結帳時 如發現該單據已經有結帳過但又出現了 便會把現有單據刪除並以新單據取代 因此不會發生一張單據重複結帳造成營業金額虛增的情況</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div class="hkb-article-tags">
+</div>
+<div class="hkb-feedback">
+<h3 class="hkb-feedback__title">這篇說明對您是否有幫助？</h3>
+<div class="ht-voting" id ="ht-voting-post-728">
+<div class="ht-voting-links ht-voting-">
+<a class="ht-voting-upvote enabled" rel="nofollow" data-direction="up" data-type="post" data-nonce="7a07a2a6d4" data-id="728" data-allow="1" data-display="standard" href="#">
+<i class="hkb-upvote-icon"></i>
+<span>Yes</span>
+</a>
+<a class="ht-voting-downvote enabled" rel="nofollow" data-direction="down" data-type="post" data-nonce="7a07a2a6d4" data-id="728" data-allow="1" data-display="standard" href="#">
+<i class="hkb-upvote-icon"></i>
+<span>No</span>
+</a>
+</div>
+<!-- no new vote -->
+</div>
+</div>
+<!-- .hkb-article__related -->     
+<section class="hkb-article-related">
+<h3 class="hkb-article-related__title">相關文章</h3>
+<ul class="hkb-article-list">
+<li class="hkb-article-list__format-standard">
+<a href="../那些功能是只有主機才能執行的/index.html">💡   那些功能是只有主機才能執行的?</a>
+</li>
+<li class="hkb-article-list__format-standard">
+<a href="../🖨️-如何設定透過無線分享器印單據或貼紙/index.html">🖨️  如何設定透過無線分享器列印單據或貼紙?</a>
+</li>
+<li class="hkb-article-list__format-standard">
+<a href="../如何設定平板windows-固定ip/index.html">📡   如何設定平板windows 固定IP?</a>
+</li>
+<li class="hkb-article-list__format-standard">
+<a href="../如何設定無線分享器/index.html">📡  如何設定無線分享器?</a>
+</li>
+<li class="hkb-article-list__format-standard">
+<a href="../📡-平板該如何設定網路和印單機/index.html">📡 想用平板電腦要準備怎麼樣的硬體設備?</a>
+</li>
+<li class="hkb-article-list__format-standard">
+<a href="../如何設定多機互聯/index.html">📡  如何設定多機互聯</a>
+</li>
+</ul>
+</section>
+<!-- /.hkb-article__related -->
+</article>
+</div>
+</div>
+</div>
+<!-- .site-footer -->
+<footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
+<div class="ht-container">
+<div class="site-footer__copyright" role="contentinfo">&copy; Copyright <a href="../../index.html">先用軟體線上說明</a>.</div>
+<nav class="nav-footer">
+<div class="menu-knowall-navigation-menu-container"><ul id="menu-knowall-navigation-menu-1" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a target="_blank" href="../../../faq/index.html">問答網</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-593"><a target="_blank" href="../../../index.html">主網頁</a></li>
+</ul></div>		</nav>
+</div>
+</footer> 
+<!-- /.site-footer -->
+<div class="ht-global-overlay"></div>
+<script type='text/javascript' src='../../wp-content/themes/knowall/js/js.min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/knowall/js/affix.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/knowall/js/scrollspy.js'></script>
+</div>
+<!-- /.ht-site-container -->
+<script type='text/javascript' src='../../assets/static-search-index.js'></script>
+<script type='text/javascript' src='../../assets/static-search.js' data-doc-root='../../'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.10635709762573 seconds, on 14-05-26 23:59:56 --><!-- need to refresh to see cached version -->

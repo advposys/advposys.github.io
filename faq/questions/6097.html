@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>套餐內容選項順序問題 - 先用軟體問答網</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="../index.html" aria-label="先用軟體問答網">
+        <img src="../assets/logo.png" alt="先用軟體問答網">
+      </a>
+      <nav class="top-nav" aria-label="問題">
+        <a class="nav-item" href="../index.html#questionList"><span class="nav-icon">&#9776;</span><span>問題</span></a>
+        <a class="nav-item" href="../index.html"><span class="nav-icon">&#8734;</span><span>回首頁</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-wrap question-wrap">
+    <article class="question-main">
+      <a class="breadcrumb" href="../index.html">回問題列表</a>
+      <h1>套餐內容選項順序問題</h1>
+      <div class="question-meta">
+        <span>Q6097</span>
+        <span>未分類</span>
+        <span>anonymous</span>
+        <span>Dec 27, 2020</span>
+      </div>
+      <section class="post-body question-body">請問：<br />
+<br />
+舉例套餐內容假設<br />
+<br />
+甜點有四種+飲料有10種<br />
+<br />
+套餐順序為先選甜點再選飲料<br />
+<br />
+可是常常會遇到先選飲料再選甜點<br />
+<br />
+假設套餐內容更多種，那順序問題就會更放大<br />
+<br />
+請問站長有沒有好的處理方式?<br />
+<br />
+例如：<br />
+<br />
+套餐限制一定要選完品項才可以按完成，然後同一套餐可分上下頁，<br />
+<br />
+(這是我在別的POS系統看到的方式)<br />
+<br />
+或者是多一個按鈕先切換下一個品項先選在跳回原本的選項反覆輪替直到選完品項才會結束<br />
+<br />
+不過系統架構不知道能做到甚麼樣程度，再請站長幫忙思考一下，謝謝</section>
+      <h2>2 個回答</h2>
+      <div class="answers"><article class="answer" id="a6099">
+  <div class="answer-meta">
+    <span>回答 #6099</span>
+    <span>advpos</span>
+    <span>Dec 28, 2020</span>
+  </div>
+  <div class="post-body">您好<br />
+<br />
+建議將飲料甜點合併為一個品項 如<br />
+<br />
+{主選單}<br />
+套餐類<br />
+&nbsp;一號餐[模式:套餐][$75]<br />
+&nbsp;&nbsp;總匯吐司[$75]<br />
+&nbsp;&nbsp;折扣[$-15] &nbsp;<br />
+&nbsp;&nbsp;飲料甜點<br />
+&nbsp;&nbsp;&nbsp;[品項名稱]紅茶[$15];奶茶[$20];綠茶[$15];可樂[$15];豆漿[$15];薏仁漿[$20];<br />
+&nbsp;&nbsp;&nbsp;中杯;大杯[$5][顏色:16737843];<br />
+&nbsp;&nbsp;&nbsp;冰[顏色:16763904]; 溫[顏色:65535]; 熱 [顏色:255];<br />
+&nbsp;&nbsp;&nbsp;★ 冰淇淋;★ 布丁;★ 奶酪;★ 蛋糕 &nbsp;&nbsp;<br />
+<br />
+&nbsp;<br />
+<br />
+可加入ASCII符號做甜點的識別<br />
+<br />
+請參考<br />
+<br />
+<a href="479.html">http://ico.tw/QA/index.php?qa=479</a><br />
+<br />
+<a href="255.html">http://ico.tw/QA/index.php?qa=255</a></div>
+</article>
+<article class="answer" id="a6101">
+  <div class="answer-meta">
+    <span>回答 #6101</span>
+    <span>advpos</span>
+    <span>Dec 28, 2020</span>
+  </div>
+  <div class="post-body">您好<br />
+<br />
+目前能想到的只有這個方式</div>
+</article></div>
+    </article>
+
+    <aside class="side-column">
+      <div class="notice-panel">
+        <p>目前論壇只能查詢舊資料</p>
+        <strong>advposys@gmail.com</strong>
+      </div>
+      <div class="side-panel info-panel">
+        <h3>問題資訊</h3>
+        <dl>
+          <dt>分類</dt><dd>未分類</dd>
+          <dt>回答</dt><dd>2</dd>
+          <dt>瀏覽</dt><dd>4.5k</dd>
+          <dt>原始檔</dt><dd><a href="../../_pages/QAS__index.php__qa-6097__2f92b5b99d11.html">HTML</a></dd>
+        </dl>
+      </div>
+      <div class="side-panel related-panel">
+        <h3>相關問題</h3>
+        <div class="related-list"><a class="related-link" href="9684.html"><span>庫存數量問題延伸</span><small>1 回答</small></a>
+<a class="related-link" href="9388.html"><span>備餐畫面增加欄位數量</span><small>1 回答</small></a>
+<a class="related-link" href="9149.html"><span>預約單閱讀</span><small>1 回答</small></a>
+<a class="related-link" href="7891.html"><span>請問可以連接二聯式紙本發票機嗎？</span><small>1 回答</small></a>
+<a class="related-link" href="6854.html"><span>套餐點餐內容點餐無法立即扣除剩餘數量</span><small>1 回答</small></a>
+<a class="related-link" href="6852.html"><span>站長，數量設定不是商品已售完</span><small>1 回答</small></a>
+<a class="related-link" href="6848.html"><span>設定餐點數量，套餐內無法扣除餐點數量</span><small>1 回答</small></a>
+<a class="related-link" href="6701.html"><span>棄單清空？？？</span><small>1 回答</small></a></div>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>

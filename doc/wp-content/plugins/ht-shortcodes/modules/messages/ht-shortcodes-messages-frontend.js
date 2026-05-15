@@ -1,0 +1,1 @@
+/* Messages frontend js */

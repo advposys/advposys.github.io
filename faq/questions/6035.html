@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>出單機設定常跑掉 - 先用軟體問答網</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="../index.html" aria-label="先用軟體問答網">
+        <img src="../assets/logo.png" alt="先用軟體問答網">
+      </a>
+      <nav class="top-nav" aria-label="問題">
+        <a class="nav-item" href="../index.html#questionList"><span class="nav-icon">&#9776;</span><span>問題</span></a>
+        <a class="nav-item" href="../index.html"><span class="nav-icon">&#8734;</span><span>回首頁</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-wrap question-wrap">
+    <article class="question-main">
+      <a class="breadcrumb" href="../index.html">回問題列表</a>
+      <h1>出單機設定常跑掉</h1>
+      <div class="question-meta">
+        <span>Q6035</span>
+        <span>未分類</span>
+        <span>匿名</span>
+        <span>Nov 17, 2020</span>
+      </div>
+      <section class="post-body question-body">作業系統是 Windows 10，使用軟體已經有幾個月了！目前常常碰到隔幾日出單機設定會跑掉，需要重新設定與儲存；有時，重新設定儲存後，出單設定還是會跑掉，甚至無可用的出單機可選取，需先關閉POS軟體，將舊備份之 Options.ini 複製到資料夾，並且，需要重新開機才能應用。不曉得有沒有店家反映過此問題，或是，有可能是哪種狀況造成？<br />
+<br />
+ps. 目前使用兩台出單機</section>
+      <h2>4 個回答</h2>
+      <div class="answers"><article class="answer" id="a6041">
+  <div class="answer-meta">
+    <span>回答 #6041</span>
+    <span>advpos</span>
+    <span>Nov 18, 2020</span>
+  </div>
+  <div class="post-body"><p>您好</p><p>在windows系統裡 對於印表機的定義是第幾台</p><p>先用系統裡的Options.ini 紀錄的是印表機的順序號碼</p><p>如果您改變了控制台-&gt;印表機的順序&nbsp; 那就會發生"設定跑掉"的情形</p><p>&nbsp;</p><p>通常是您去做了安裝 或刪除印表機的驅動 才會改變了控制台-&gt;印表機的順序 此時 您必須進入先用系統 去重新做設定 ,因為印表機的順序已經改變</p><p><img alt="" src="../_assets/QA__asset__a3f00faf6509.jpg"></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+</article>
+<article class="answer" id="a6043">
+  <div class="answer-meta">
+    <span>回答 #6043</span>
+    <span>匿名</span>
+    <span>Nov 18, 2020</span>
+  </div>
+  <div class="post-body">基本上，沒有變動印表機裝置（即：不會去「安裝或刪除印表機的驅動」），也沒有變更原預設的印表機。若 Options.ini 紀錄的只是印表機順序，那會不會是 USB 系統鎖偶爾讀取不到（因: 開 POS 軟體，偶爾會跑到「試用」畫面），就會將 USB 重新插拔或再重開機，不知是否為此狀況所致？此會再持續觀察。</div>
+</article>
+<article class="answer" id="a6052">
+  <div class="answer-meta">
+    <span>回答 #6052</span>
+    <span>advpos</span>
+    <span>Nov 19, 2020</span>
+  </div>
+  <div class="post-body">先用系統的印表機是讀取 &nbsp;windows系統的 控制台-&gt;裝置和印表機 中的印表機列表, 正常而言 插拔USB並不會異動windows系統的印表機列表<br />
+<br />
+站長猜測可能是windows 10的更新檔有問題<br />
+近期的windows 10 更新常常出包 &nbsp;將USB 印表機設定弄亂 如果您最近有更新windows10 那也許是更新造成的<br />
+<br />
+<a href="https://www.ithome.com.tw/news/138231">https://www.ithome.com.tw/news/138231</a><br />
+<br />
+如果使用上沒問題 建議關閉windows 10 的自動更新</div>
+</article>
+<article class="answer" id="a6053">
+  <div class="answer-meta">
+    <span>回答 #6053</span>
+    <span>匿名</span>
+    <span>Nov 19, 2020</span>
+  </div>
+  <div class="post-body"><p><span>Windows 10 KB4560960 與 KB4557957 都沒有更新；自動更新稍早已關閉，會再觀察一陣子，看是否是Windows 更新重開機所致。故暫時先如此處理，感謝解答！！</span></p></div>
+</article></div>
+    </article>
+
+    <aside class="side-column">
+      <div class="notice-panel">
+        <p>目前論壇只能查詢舊資料</p>
+        <strong>advposys@gmail.com</strong>
+      </div>
+      <div class="side-panel info-panel">
+        <h3>問題資訊</h3>
+        <dl>
+          <dt>分類</dt><dd>未分類</dd>
+          <dt>回答</dt><dd>4</dd>
+          <dt>瀏覽</dt><dd>1.6k</dd>
+          <dt>原始檔</dt><dd><a href="../../_pages/QAS__index.php__qa-6035__a3f5c8779737.html">HTML</a></dd>
+        </dl>
+      </div>
+      <div class="side-panel related-panel">
+        <h3>相關問題</h3>
+        <div class="related-list"><a class="related-link" href="9684.html"><span>庫存數量問題延伸</span><small>1 回答</small></a>
+<a class="related-link" href="9388.html"><span>備餐畫面增加欄位數量</span><small>1 回答</small></a>
+<a class="related-link" href="9149.html"><span>預約單閱讀</span><small>1 回答</small></a>
+<a class="related-link" href="7891.html"><span>請問可以連接二聯式紙本發票機嗎？</span><small>1 回答</small></a>
+<a class="related-link" href="6854.html"><span>套餐點餐內容點餐無法立即扣除剩餘數量</span><small>1 回答</small></a>
+<a class="related-link" href="6852.html"><span>站長，數量設定不是商品已售完</span><small>1 回答</small></a>
+<a class="related-link" href="6848.html"><span>設定餐點數量，套餐內無法扣除餐點數量</span><small>1 回答</small></a>
+<a class="related-link" href="6701.html"><span>棄單清空？？？</span><small>1 回答</small></a></div>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>

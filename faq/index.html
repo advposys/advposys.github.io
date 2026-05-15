@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>先用軟體問答網</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/data.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="index.html" aria-label="先用軟體問答網">
+        <img src="assets/logo.png" alt="先用軟體問答網">
+      </a>
+      <nav class="top-nav" aria-label="問題">
+        <a class="nav-item" href="#questionList"><span class="nav-icon">&#9776;</span><span>問題</span></a>
+        <a class="nav-item" href="index.html"><span class="nav-icon">&#8734;</span><span>回首頁</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-wrap">
+    <section class="content-column" aria-labelledby="latestTitle">
+      <div class="section-heading">
+        <h1 id="latestTitle">最新問答</h1>
+        <span class="rss-mark" aria-hidden="true"></span>
+      </div>
+      <div class="result-strip" aria-live="polite">
+        <span id="activeFilter">所有問題</span>
+        <span><strong id="resultCount">0</strong> / 604</span>
+      </div>
+      <div id="questionList" class="question-list"></div>
+    </section>
+
+    <aside class="side-column">
+      <form class="search-panel" id="searchForm" role="search">
+        <input id="searchInput" type="search" aria-label="搜尋問題或回答" placeholder="搜尋問題或回答">
+        <button type="submit" aria-label="搜尋問題或回答">&#128269;</button>
+      </form>
+
+      <div class="notice-panel">
+        <p>目前論壇只能查詢舊資料</p>
+        <strong>advposys@gmail.com</strong>
+      </div>
+
+      <div class="side-panel category-panel">
+        <div id="categoryList" class="category-list" aria-label="所有分類"></div>
+      </div>
+
+      <div class="side-panel feed-panel">
+        <a href="#latestTitle"><span class="rss-small" aria-hidden="true"></span>最新問答</a>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
